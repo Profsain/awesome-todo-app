@@ -9,6 +9,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
   const [editIndex, setEditIndex] = useState(null);
   const [deleteIndex, setDeleteIndex] = useState(null);
+  const [comTitle, setComTitle] = useState("Add Todo");
 
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem("todos"));
@@ -38,6 +39,7 @@ function App() {
 
   // handle edit todo
   const handleEditTodo = (index) => {
+    setComTitle("Edit Todo");
     setEditIndex(index);
     setDeleteIndex(index);
     setInputValue(todos[index].text);
@@ -51,6 +53,7 @@ function App() {
       setTodos(updatedTodos);
       setEditIndex(null);
       setInputValue("");
+      setComTitle("Add Todo");
     }
   };
 
@@ -104,7 +107,7 @@ function App() {
             </div>
           </div>
           <div id="editTask">
-            <TaskHeader />
+            <TaskHeader title={ comTitle} />
 
             {/* add and edit task */}
             <div className="innerContainer">
