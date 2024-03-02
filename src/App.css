@@ -105,14 +105,32 @@
 }
 
 /* mobile responsive design */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   #container {
+
+  }
+  .container {
     flex-direction: column;
+    height: 100%;
   }
   #todo {
     width: 100%;
   }
   #editTask {
     width: 100%;
+  }
+
+  .btnContainer {
+    display: flex;
+    position: relative;
+    top: 0px;
+  }
+
+  .addBtn {
+    height: 61px;
+    position: relative;
+    left: 270px;
+    top: 0px;
+    
   }
 }
