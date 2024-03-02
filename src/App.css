@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#container {
+  padding: 28px 48px;
+  background-color: #373e56;
+  
+}
+
+#todo {
+  width: 425px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#editTask {
+  width: 600px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputField {
+   width: 100%;
+  height: 69px;
+  border-radius: 9px;
+  border: 1px solid #ddd;
+  margin: 16px 0;
+  padding: 14px;
+  font-size: 16px;
+
+}
+
+.container {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  /* overflow-y: auto; */
+}
+
+.innerContainer {
+    padding: 28px 16px;
+}
+
+.deleteBtn {
+  color: #fff;
+  background-color: #ab3535;
+  width: 121px;
+  height: 61px;
+  margin-right: 24px;
+  border: 2px solid #720d0d;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+ background-color: #720d0d;
+}
+
+.saveBtn {
+  width: 100%;
+  height: 61px;
+  border: 2px solid #0d2972;
+  color: #fff;
+  border-radius: 6px;
+  background-color: #3556ab;
+  cursor: pointer;
+}
+
+.saveBtn:hover {
+  background-color: #0d2972;
+}
+
+.btnContainer {
+  display: flex;
+  position: relative;
+  top: 400px
+}
+
+.addBtn {
+  width: 60px;
+  height: 61px;
+  position: absolute;
+  left: 438px;
+  top: 640px;
+  border: 2px solid #123eb1;
+  background-color: #1f4f9d;
+  color: #fff;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #123eb1;
+}
+
+.itemContainer {
+  height: 380px;
+  overflow-y: auto;
+}
+
+/* mobile responsive design */
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+  #todo {
+    width: 100%;
+  }
+  #editTask {
+    width: 100%;
+  }
+}
